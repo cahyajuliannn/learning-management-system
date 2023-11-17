@@ -14,15 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/theses")
 public class ThesisController extends BaseController<Thesis, ThesisDTO, Long> {
-    private final ThesisService service;
+  private final ThesisService service;
 
-    public ThesisController(ThesisService service) {
-        super(service);
-        this.service = service;
-    }
+  public ThesisController(ThesisService service) {
+    super(service);
+    this.service = service;
+  }
 
-    @GetMapping("/student/{id}")
-    public ResponseEntity<ThesisDTO> getByStudentId(@PathVariable Long id) {
-        return new ResponseEntity<>(this.service.findByStudentId(id), HttpStatus.OK);
-    }
+  @GetMapping("/student/{id}")
+  public ResponseEntity<ThesisDTO> getByStudentId(@PathVariable Long id) {
+    return new ResponseEntity<>(this.service.findByStudentId(id), HttpStatus.OK);
+  }
 }

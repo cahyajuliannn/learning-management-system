@@ -5,6 +5,6 @@ import org.springframework.test.context.TestPropertySource;
 
 @TestPropertySource(locations = "classpath:test.yaml")
 class ExamServiceApplicationTests {
-    @Test
-    void contextLoads() {}
+  @Test
+  void contextLoads() {}
 }

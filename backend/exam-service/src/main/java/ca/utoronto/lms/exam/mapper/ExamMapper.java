@@ -9,11 +9,11 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface ExamMapper extends BaseMapper<Exam, ExamDTO, Long> {
-    @Mapping(source = "subjectId", target = "subject")
-    ExamDTO toDTO(Exam exam);
+  @Mapping(source = "subjectId", target = "subject")
+  ExamDTO toDTO(Exam exam);
 
-    @Mapping(source = "subject.id", target = "subjectId")
-    Exam toModel(ExamDTO examDTO);
+  @Mapping(source = "subject.id", target = "subjectId")
+  Exam toModel(ExamDTO examDTO);
 
-    SubjectDTO subjectDTOFromId(Long id);
+  SubjectDTO subjectDTOFromId(Long id);
 }

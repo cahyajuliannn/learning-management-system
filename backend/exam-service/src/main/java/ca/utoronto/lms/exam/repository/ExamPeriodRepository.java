@@ -9,11 +9,11 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ExamPeriodRepository extends BaseRepository<ExamPeriod, Long> {
-    @Override
-    @Query(
-            "select x from #{#entityName} x where x.deleted = false "
-                    + "and (cast(x.id as string) like :search or x.name like :search "
-                    + "or cast(x.registrationStartDate as string) like :search or cast(x.registrationEndDate as string) like :search "
-                    + "or cast(x.examStartDate as string) like :search or cast(x.examEndDate as string) like :search)")
-    Page<ExamPeriod> findContaining(Pageable pageable, String search);
+  @Override
+  @Query(
+      "select x from #{#entityName} x where x.deleted = false and (cast(x.id as string) like"
+          + " :search or x.name like :search or cast(x.registrationStartDate as string) like"
+          + " :search or cast(x.registrationEndDate as string) like :search or cast(x.examStartDate"
+          + " as string) like :search or cast(x.examEndDate as string) like :search)")
+  Page<ExamPeriod> findContaining(Pageable pageable, String search);
 }

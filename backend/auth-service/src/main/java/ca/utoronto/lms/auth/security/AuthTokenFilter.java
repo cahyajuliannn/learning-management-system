@@ -8,16 +8,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AuthTokenFilter extends AuthenticationTokenFilter {
-    private final UserDetailsService userDetailsService;
+  private final UserDetailsService userDetailsService;
 
-    public AuthTokenFilter(TokenUtils tokenUtils, UserDetailsService userDetailsService) {
-        // AuthFeignClient isn't need anymore because getUserDetails is overriden
-        super(null, tokenUtils);
-        this.userDetailsService = userDetailsService;
-    }
+  public AuthTokenFilter(TokenUtils tokenUtils, UserDetailsService userDetailsService) {
+    // AuthFeignClient isn't need anymore because getUserDetails is overriden
+    super(null, tokenUtils);
+    this.userDetailsService = userDetailsService;
+  }
 
-    @Override
-    protected UserDetails getUserDetails(String username) {
-        return userDetailsService.loadUserByUsername(username);
-    }
+  @Override
+  protected UserDetails getUserDetails(String username) {
+    return userDetailsService.loadUserByUsername(username);
+  }
 }

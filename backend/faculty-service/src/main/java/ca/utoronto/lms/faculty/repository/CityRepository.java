@@ -9,9 +9,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CityRepository extends BaseRepository<City, Long> {
-    @Override
-    @Query(
-            "select x from #{#entityName} x where x.deleted = false "
-                    + "and (cast(x.id as string) like :search or x.name like :search)")
-    Page<City> findContaining(Pageable pageable, String search);
+  @Override
+  @Query(
+      "select x from #{#entityName} x where x.deleted = false "
+          + "and (cast(x.id as string) like :search or x.name like :search)")
+  Page<City> findContaining(Pageable pageable, String search);
 }

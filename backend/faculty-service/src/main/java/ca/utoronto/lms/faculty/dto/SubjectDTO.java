@@ -11,11 +11,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class SubjectDTO extends BaseDTO<Long> {
-    private String name;
-    private String syllabus;
-    private Integer semester;
-    private Integer ects;
-    private StudyProgramDTO studyProgram;
-    private TeacherDTO professor;
-    private TeacherDTO assistant;
+  private String name;
+  private String syllabus;
+  private Integer semester;
+  private Integer ects;
+  private StudyProgramDTO studyProgram;
+  private TeacherDTO professor;
+  private TeacherDTO assistant;
 }
