@@ -13,13 +13,9 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients({"ca.utoronto.lms.auth", "ca.utoronto.lms.shared"})
 @ComponentScan({"ca.utoronto.lms.auth", "ca.utoronto.lms.shared"})
 @OpenAPIDefinition(
-        info =
-                @Info(
-                        title = "Auth API",
-                        version = "1.0",
-                        description = "Documentation Auth API v1.0"))
+    info = @Info(title = "Auth API", version = "1.0", description = "Documentation Auth API v1.0"))
 public class AuthServiceApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(AuthServiceApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(AuthServiceApplication.class, args);
+  }
 }

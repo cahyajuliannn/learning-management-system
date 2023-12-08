@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/cities")
 public class CityController extends BaseController<City, CityDTO, Long> {
-    private final CityService service;
+  private final CityService service;
 
-    public CityController(CityService service) {
-        super(service);
-        this.service = service;
-    }
+  public CityController(CityService service) {
+    super(service);
+    this.service = service;
+  }
 }

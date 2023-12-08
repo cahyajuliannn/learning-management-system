@@ -14,15 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/administrators")
 public class AdministratorController extends BaseController<Administrator, AdministratorDTO, Long> {
-    private final AdministratorService service;
+  private final AdministratorService service;
 
-    public AdministratorController(AdministratorService service) {
-        super(service);
-        this.service = service;
-    }
+  public AdministratorController(AdministratorService service) {
+    super(service);
+    this.service = service;
+  }
 
-    @GetMapping("/user-id/{id}/id")
-    public ResponseEntity<Long> getIdByUserId(@PathVariable Long id) {
-        return new ResponseEntity<>(this.service.findByUserId(id).getId(), HttpStatus.OK);
-    }
+  @GetMapping("/user-id/{id}/id")
+  public ResponseEntity<Long> getIdByUserId(@PathVariable Long id) {
+    return new ResponseEntity<>(this.service.findByUserId(id).getId(), HttpStatus.OK);
+  }
 }

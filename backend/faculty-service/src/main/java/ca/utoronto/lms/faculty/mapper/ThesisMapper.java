@@ -10,7 +10,7 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface ThesisMapper extends BaseMapper<Thesis, ThesisDTO, Long> {
-    @Mapping(target = "thesis", ignore = true)
-    @Mapping(target = "studyProgram", ignore = true)
-    StudentDTO toDTO(Student student);
+  @Mapping(target = "thesis", ignore = true)
+  @Mapping(target = "studyProgram", ignore = true)
+  StudentDTO toDTO(Student student);
 }

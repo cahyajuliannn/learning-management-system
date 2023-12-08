@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/countries")
 public class CountryController extends BaseController<Country, CountryDTO, Long> {
-    private final CountryService service;
+  private final CountryService service;
 
-    public CountryController(CountryService service) {
-        super(service);
-        this.service = service;
-    }
+  public CountryController(CountryService service) {
+    super(service);
+    this.service = service;
+  }
 }

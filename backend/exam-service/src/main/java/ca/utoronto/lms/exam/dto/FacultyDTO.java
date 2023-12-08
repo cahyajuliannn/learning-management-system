@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class FacultyDTO extends BaseDTO<Long> {
-    private String name;
-    private String description;
-    private String email;
+  private String name;
+  private String description;
+  private String email;
 }

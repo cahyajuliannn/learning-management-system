@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class FacultyService extends BaseService<Faculty, FacultyDTO, Long> {
-    private final FacultyRepository repository;
-    private final FacultyMapper mapper;
+  private final FacultyRepository repository;
+  private final FacultyMapper mapper;
 
-    public FacultyService(FacultyRepository repository, FacultyMapper mapper) {
-        super(repository, mapper);
-        this.repository = repository;
-        this.mapper = mapper;
-    }
+  public FacultyService(FacultyRepository repository, FacultyMapper mapper) {
+    super(repository, mapper);
+    this.repository = repository;
+    this.mapper = mapper;
+  }
 }
