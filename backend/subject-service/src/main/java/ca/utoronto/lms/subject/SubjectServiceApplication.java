@@ -13,13 +13,13 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients({"ca.utoronto.lms.subject", "ca.utoronto.lms.shared"})
 @ComponentScan({"ca.utoronto.lms.subject", "ca.utoronto.lms.shared"})
 @OpenAPIDefinition(
-        info =
-                @Info(
-                        title = "Subject API",
-                        version = "1.0",
-                        description = "Documentation Subject API v1.0"))
+    info =
+        @Info(
+            title = "Subject API",
+            version = "1.0",
+            description = "Documentation Subject API v1.0"))
 public class SubjectServiceApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(SubjectServiceApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(SubjectServiceApplication.class, args);
+  }
 }

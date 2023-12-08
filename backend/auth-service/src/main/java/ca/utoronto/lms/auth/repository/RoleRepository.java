@@ -9,9 +9,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RoleRepository extends BaseRepository<Role, Long> {
-    @Override
-    @Query(
-            "select x from #{#entityName} x where x.deleted = false "
-                    + "and (cast(x.id as string) like :search or x.authority like :search)")
-    Page<Role> findContaining(Pageable pageable, String search);
+  @Override
+  @Query(
+      "select x from #{#entityName} x where x.deleted = false "
+          + "and (cast(x.id as string) like :search or x.authority like :search)")
+  Page<Role> findContaining(Pageable pageable, String search);
 }

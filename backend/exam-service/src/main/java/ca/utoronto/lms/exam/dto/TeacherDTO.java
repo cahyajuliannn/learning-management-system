@@ -12,7 +12,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class TeacherDTO extends BaseDTO<Long> {
-    private UserDTO user;
-    private String firstName;
-    private String lastName;
+  private UserDTO user;
+  private String firstName;
+  private String lastName;
 }

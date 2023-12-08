@@ -9,11 +9,11 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface TeacherMapper extends BaseMapper<Teacher, TeacherDTO, Long> {
-    @Mapping(source = "userId", target = "user")
-    TeacherDTO toDTO(Teacher teacher);
+  @Mapping(source = "userId", target = "user")
+  TeacherDTO toDTO(Teacher teacher);
 
-    @Mapping(source = "user.id", target = "userId")
-    Teacher toModel(TeacherDTO teacherDTO);
+  @Mapping(source = "user.id", target = "userId")
+  Teacher toModel(TeacherDTO teacherDTO);
 
-    UserDTO userDTOFromId(Long id);
+  UserDTO userDTOFromId(Long id);
 }

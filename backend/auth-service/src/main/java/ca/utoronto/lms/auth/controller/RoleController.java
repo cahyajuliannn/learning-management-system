@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/roles")
 public class RoleController extends BaseController<Role, RoleDTO, Long> {
-    private final RoleService service;
+  private final RoleService service;
 
-    public RoleController(RoleService service) {
-        super(service);
-        this.service = service;
-    }
+  public RoleController(RoleService service) {
+    super(service);
+    this.service = service;
+  }
 }

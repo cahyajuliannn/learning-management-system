@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/exam-types")
 public class ExamTypeController extends BaseController<ExamType, ExamTypeDTO, Long> {
-    private final ExamTypeService service;
+  private final ExamTypeService service;
 
-    public ExamTypeController(ExamTypeService service) {
-        super(service);
-        this.service = service;
-    }
+  public ExamTypeController(ExamTypeService service) {
+    super(service);
+    this.service = service;
+  }
 }

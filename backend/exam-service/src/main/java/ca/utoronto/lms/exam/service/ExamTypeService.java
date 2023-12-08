@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ExamTypeService extends BaseService<ExamType, ExamTypeDTO, Long> {
-    private final ExamTypeRepository repository;
-    private final ExamTypeMapper mapper;
+  private final ExamTypeRepository repository;
+  private final ExamTypeMapper mapper;
 
-    public ExamTypeService(ExamTypeRepository repository, ExamTypeMapper mapper) {
-        super(repository, mapper);
-        this.repository = repository;
-        this.mapper = mapper;
-    }
+  public ExamTypeService(ExamTypeRepository repository, ExamTypeMapper mapper) {
+    super(repository, mapper);
+    this.repository = repository;
+    this.mapper = mapper;
+  }
 }

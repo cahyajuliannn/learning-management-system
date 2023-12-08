@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class RoleService extends BaseService<Role, RoleDTO, Long> {
-    private final RoleRepository repository;
-    private final RoleMapper mapper;
+  private final RoleRepository repository;
+  private final RoleMapper mapper;
 
-    public RoleService(RoleRepository repository, RoleMapper mapper) {
-        super(repository, mapper);
-        this.repository = repository;
-        this.mapper = mapper;
-    }
+  public RoleService(RoleRepository repository, RoleMapper mapper) {
+    super(repository, mapper);
+    this.repository = repository;
+    this.mapper = mapper;
+  }
 }

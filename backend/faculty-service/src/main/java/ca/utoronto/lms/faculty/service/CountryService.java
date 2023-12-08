@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CountryService extends BaseService<Country, CountryDTO, Long> {
-    private final CountryRepository repository;
-    private final CountryMapper mapper;
+  private final CountryRepository repository;
+  private final CountryMapper mapper;
 
-    public CountryService(CountryRepository repository, CountryMapper mapper) {
-        super(repository, mapper);
-        this.repository = repository;
-        this.mapper = mapper;
-    }
+  public CountryService(CountryRepository repository, CountryMapper mapper) {
+    super(repository, mapper);
+    this.repository = repository;
+    this.mapper = mapper;
+  }
 }

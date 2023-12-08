@@ -12,9 +12,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class StudentDTO extends BaseDTO<Long> {
-    private UserDTO user;
-    private String firstName;
-    private String lastName;
-    private String index;
-    private Integer yearOfEnrollment;
+  private UserDTO user;
+  private String firstName;
+  private String lastName;
+  private String index;
+  private Integer yearOfEnrollment;
 }
