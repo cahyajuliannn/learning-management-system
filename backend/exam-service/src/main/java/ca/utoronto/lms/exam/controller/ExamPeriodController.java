@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/exam-periods")
 public class ExamPeriodController extends BaseController<ExamPeriod, ExamPeriodDTO, Long> {
-    private final ExamPeriodService service;
+  private final ExamPeriodService service;
 
-    public ExamPeriodController(ExamPeriodService service) {
-        super(service);
-        this.service = service;
-    }
+  public ExamPeriodController(ExamPeriodService service) {
+    super(service);
+    this.service = service;
+  }
 }

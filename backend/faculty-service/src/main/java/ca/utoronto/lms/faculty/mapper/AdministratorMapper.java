@@ -9,11 +9,11 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface AdministratorMapper extends BaseMapper<Administrator, AdministratorDTO, Long> {
-    @Mapping(source = "userId", target = "user")
-    AdministratorDTO toDTO(Administrator administrator);
+  @Mapping(source = "userId", target = "user")
+  AdministratorDTO toDTO(Administrator administrator);
 
-    @Mapping(source = "user.id", target = "userId")
-    Administrator toModel(AdministratorDTO administratorDTO);
+  @Mapping(source = "user.id", target = "userId")
+  Administrator toModel(AdministratorDTO administratorDTO);
 
-    UserDTO userDTOFromId(Long id);
+  UserDTO userDTOFromId(Long id);
 }

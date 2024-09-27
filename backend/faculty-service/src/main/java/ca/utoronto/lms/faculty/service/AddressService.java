@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AddressService extends BaseService<Address, AddressDTO, Long> {
-    private final AddressRepository repository;
-    private final AddressMapper mapper;
+  private final AddressRepository repository;
+  private final AddressMapper mapper;
 
-    public AddressService(AddressRepository repository, AddressMapper mapper) {
-        super(repository, mapper);
-        this.repository = repository;
-        this.mapper = mapper;
-    }
+  public AddressService(AddressRepository repository, AddressMapper mapper) {
+    super(repository, mapper);
+    this.repository = repository;
+    this.mapper = mapper;
+  }
 }

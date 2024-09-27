@@ -11,16 +11,16 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface SubjectTermMapper extends BaseMapper<SubjectTerm, SubjectTermDTO, Long> {
-    @Mapping(source = "teacherId", target = "teacher")
-    SubjectTermDTO toDTO(SubjectTerm SubjectTerm);
+  @Mapping(source = "teacherId", target = "teacher")
+  SubjectTermDTO toDTO(SubjectTerm SubjectTerm);
 
-    @Mapping(source = "teacher.id", target = "teacherId")
-    SubjectTerm toModel(SubjectTermDTO SubjectTermDTO);
+  @Mapping(source = "teacher.id", target = "teacherId")
+  SubjectTerm toModel(SubjectTermDTO SubjectTermDTO);
 
-    TeacherDTO teacherDTOFromId(Long id);
+  TeacherDTO teacherDTOFromId(Long id);
 
-    @Mapping(target = "studyProgram", ignore = true)
-    @Mapping(target = "professor", ignore = true)
-    @Mapping(target = "assistant", ignore = true)
-    SubjectDTO toDTO(Subject subject);
+  @Mapping(target = "studyProgram", ignore = true)
+  @Mapping(target = "professor", ignore = true)
+  @Mapping(target = "assistant", ignore = true)
+  SubjectDTO toDTO(Subject subject);
 }
